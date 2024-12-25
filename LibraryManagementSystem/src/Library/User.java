@@ -1,3 +1,5 @@
+package Library;
+
 public abstract class User {
     private String userId;
     private String name;
@@ -42,7 +44,7 @@ public abstract class User {
 
     final String generateUniqueId() {
         maxUserId++;
-        return maxUserId + "";
+        return "Library.User-" + maxUserId;
     }
 
     abstract void displayDashboard();
