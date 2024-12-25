@@ -69,6 +69,7 @@ public abstract class Book implements ILendable {
     @Override
     public void returnBook(User user) {
         isAvailable = true;
+        user.returnBook();
     }
 
     @Override

@@ -37,5 +37,13 @@ public class Client {
             System.out.println("Book not lent to " + user2.getName());
         }
 
+        book1.returnBook(user1);
+
+        if (book1.lend(user2)) {
+            System.out.println("Book lent to " + user2.getName());
+        }
+        else {
+            System.out.println("Book not lent to " + user2.getName());
+        }
     }
 }
