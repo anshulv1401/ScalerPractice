@@ -47,7 +47,9 @@ public abstract class User {
         return "Library.User-" + maxUserId;
     }
 
-    abstract void displayDashboard();
+    public abstract void displayDashboard();
 
-    abstract boolean canBorrowBooks();
+    public abstract boolean canBorrowBooks();
+
+    public abstract void returnBook();
 }

@@ -16,14 +16,19 @@ public class Member extends User {
     }
 
     @Override
-    void displayDashboard() {
+    public void displayDashboard() {
         System.out.println("Library.Member Dashboard");
         System.out.println("Name" + getName());
         System.out.println("Books Borrowed: " + borrowedBooksCount);
     }
 
     @Override
-    boolean canBorrowBooks() {
+    public boolean canBorrowBooks() {
         return borrowedBooksCount < MAX_BORROW_LIMIT;
+    }
+
+    @Override
+    public void returnBook() {
+        borrowedBooksCount--;
     }
 }

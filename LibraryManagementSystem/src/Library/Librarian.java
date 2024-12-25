@@ -1,29 +1,36 @@
 package Library;
 
+import Books.Book;
+
 public class Librarian extends User {
 
     private String employeeNumber;
 
-    Librarian(String employeeNumber) {
+    public Librarian(String employeeNumber) {
         super();
         this.employeeNumber = employeeNumber;
     }
 
-    Librarian(String employeeNumber, String name, String contactInfo) {
+    public Librarian(String employeeNumber, String name, String contactInfo) {
         super(name, contactInfo);
         this.employeeNumber = employeeNumber;
     }
 
     @Override
-    void displayDashboard() {
+    public void displayDashboard() {
         System.out.println("Library.Librarian Dashboard");
         System.out.println("Name :" + getName());
         System.out.println("Employee Number: " + employeeNumber);
     }
 
     @Override
-    boolean canBorrowBooks() {
+    public boolean canBorrowBooks() {
         return true;
+    }
+
+    @Override
+    public void returnBook() {
+
     }
 
     void addNewBook(Book book) {
