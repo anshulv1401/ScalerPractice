@@ -30,7 +30,7 @@ public class Librarian extends User {
 
     @Override
     public void returnBook() {
-
+        System.out.println("Book returned");
     }
 
     void addNewBook(Book book) {

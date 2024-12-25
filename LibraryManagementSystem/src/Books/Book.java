@@ -5,9 +5,39 @@ import Library.User;
 public abstract class Book implements ILendable {
 
     String isbn;
-    String title;
-    String author;
-    boolean isAvailable;
+    private String title;
+    private String  author;
+    private boolean isAvailable;
+    protected String type;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
+    }
 
     public Book(){
         isAvailable = true;

@@ -1,6 +1,6 @@
 package Books;
 
-public class TextBook extends Book{
+public class TextBook extends Book {
 
     private String subject;
     private String edition;
@@ -10,6 +10,7 @@ public class TextBook extends Book{
         super(isbn, title, author);
         this.subject = subject;
         this.edition = edition;
+        type = "TextBook";
     }
 
     @Override

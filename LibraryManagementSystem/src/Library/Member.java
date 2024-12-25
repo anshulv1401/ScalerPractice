@@ -5,12 +5,12 @@ public class Member extends User {
     private int borrowedBooksCount;
     static final int MAX_BORROW_LIMIT = 5;
 
-    Member() {
+    public Member() {
         super();
         borrowedBooksCount = 0;
     }
 
-    Member(String name, String contactInfo) {
+    public Member(String name, String contactInfo) {
         super(name, contactInfo);
         borrowedBooksCount = 0;
     }
@@ -30,5 +30,6 @@ public class Member extends User {
     @Override
     public void returnBook() {
         borrowedBooksCount--;
+        System.out.println("Book returned");
     }
 }

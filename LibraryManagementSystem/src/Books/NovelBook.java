@@ -7,6 +7,7 @@ public class NovelBook extends Book{
     public NovelBook(String isbn, String title, String author, String genre) {
         super(isbn, title, author);
         this.genre = genre;
+        type = "NovelBook";
     }
 
     @Override
