@@ -26,8 +26,26 @@ public class Main {
         inventory.getItem("1");
         inventory.getItem("6");
 
+        System.out.println("------------Recently viewed------------");
+
         for (Item item : inventory.getRecentlyViewedItems()) {
             System.out.println(item.id + ":" + item.name);
+        }
+
+        System.out.println("------------Priority Queue------------");
+
+        OrderQueue queue = new OrderQueue();
+
+        queue.addOrder(new Order("1", false));
+        queue.addOrder(new Order("3", false));
+        queue.addOrder(new Order("2", false));
+        queue.addOrder(new Order("5", true));
+        queue.addOrder(new Order("6", true));
+        queue.addOrder(new Order("4", true));
+
+        while (!queue.isEmpty())
+        {
+            System.out.println(queue.processQueue().orderId);
         }
     }
 }
