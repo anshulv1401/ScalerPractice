@@ -1,4 +1,5 @@
 public class Order implements Comparable<Order> {
+    private int totalAmount;
     String orderId;
     Boolean isExpress;
 
@@ -18,9 +19,10 @@ public class Order implements Comparable<Order> {
         isExpress = express;
     }
 
-    public Order(String orderId, Boolean isExpress) {
+    public Order(String orderId, Boolean isExpress, int totalAmount) {
         this.orderId = orderId;
         this.isExpress = isExpress;
+        this.totalAmount = totalAmount;
     }
 
     @Override
@@ -31,5 +33,9 @@ public class Order implements Comparable<Order> {
             return -1;
         else
             return 1;
+    }
+
+    public int getTotalAmount() {
+        return totalAmount;
     }
 }

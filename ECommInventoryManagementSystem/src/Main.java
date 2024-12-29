@@ -34,18 +34,19 @@ public class Main {
 
         System.out.println("------------Priority Queue------------");
 
-        OrderQueue queue = new OrderQueue();
+        OrderQueue queue = new OrderQueue(new OrderTotalAmountComparator());
 
-        queue.addOrder(new Order("1", false));
-        queue.addOrder(new Order("3", false));
-        queue.addOrder(new Order("2", false));
-        queue.addOrder(new Order("5", true));
-        queue.addOrder(new Order("6", true));
-        queue.addOrder(new Order("4", true));
+        queue.addOrder(new Order("1", false, 50));
+        queue.addOrder(new Order("3", false, 60));
+        queue.addOrder(new Order("2", false, 10));
+        queue.addOrder(new Order("5", true, 5));
+        queue.addOrder(new Order("6", true, 70));
+        queue.addOrder(new Order("4", true, 58));
 
         while (!queue.isEmpty())
         {
-            System.out.println(queue.processQueue().orderId);
+            Order order= queue.processQueue();
+            System.out.println(order.orderId + ":" + order.getTotalAmount());
         }
     }
 }
