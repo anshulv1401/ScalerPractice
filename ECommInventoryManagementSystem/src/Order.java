@@ -25,11 +25,11 @@ public class Order implements Comparable<Order> {
 
     @Override
     public int compareTo(Order o) {
-        if (this.isExpress && !o.isExpress)
+        if (this.isExpress == o.isExpress)
+            return this.orderId.compareTo(o.orderId);
+        else if (this.isExpress)
             return -1;
-        if (!this.isExpress && o.isExpress)
+        else
             return 1;
-
-        return this.orderId.compareTo(o.orderId);
     }
 }
